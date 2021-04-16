@@ -30,11 +30,11 @@ class FilePathToDatabase extends DataConnection
     /**
      * Class Constructor.
      */
-    public function __construct()
+    public function __construct($path, $exludeDirs=NULL, $regex=NULL)
     {
         parent::__construct();
         echo "\n[+] Searching directories for .php files\n\n";
-        $this->files = $this->fileFinder('C:/wamp64/www/repositories/');
+        $this->files = $this->fileFinder($path, $exludeDirs, $regex);
         if (count($this->files) > 0)
         {
             $count = count($this->files);
@@ -140,4 +140,3 @@ class FilePathToDatabase extends DataConnection
         return;
     }
 }
-new FilePathToDatabase;
