@@ -1,0 +1,13 @@
+{
+    "name": "robertbyrnes/directorytodatabase",
+    "description": "",
+    "require": {
+        "robertbyrnes/dataconnection": "dev-master@dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "": "classes/"
+        }
+    }
+}
