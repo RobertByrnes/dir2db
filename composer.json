@@ -1,5 +1,5 @@
 {
-    "name": "robertbyrnes/directorytodatabase",
+    "name": "robertbyrnes/dir2db",
     "description": "Uses PHP recursive iterator classes and regex iterator class to recursively search directories for .php files.",
     "license": "GPL-3.0-or-later",
     "require": {
