@@ -1,7 +1,7 @@
 # Directory_to_Database
 - Uses PHP recursive iterator classes and regex iterator classes to recursively search directories for .php files.
 
-- Any file extension may be searched for a group fo them by passing in regex. See help description (run dir2db.php in cmd)
+- Any file extension may be searched for, or a group of them by passing in regex. See help description (run dir2db.php in cmd)
 
 - Certain named directories may be excluded from the search, again by passing in regex through cmd (see help in dir2db.php)
 # Setup
