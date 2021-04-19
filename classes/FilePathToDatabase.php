@@ -39,6 +39,7 @@ class FilePathToDatabase extends DataConnection
         {
             $count = count($this->files);
             print("[+] ".$count." Files found.\n\n");
+            sleep(2);
             $this->insertFilesToDatabase();
         }
         else
@@ -57,6 +58,7 @@ class FilePathToDatabase extends DataConnection
     private function insertFilesToDatabase() : void
     {
         print("[+] Inserting files into database.\n\n");
+        sleep(2);
         $this->errorCount = 0;
         $rowCount = 0;
         foreach ($this->files as $file)

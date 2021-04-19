@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => '3fb33001213e6837745a285636e2798038b7e1cc',
+    'reference' => '605e88075529ac09bbb64fc63a47681bed3410d7',
     'name' => 'robertbyrnes/directorytodatabase',
   ),
   'versions' => 
@@ -23,12 +23,12 @@
     ),
     'robertbyrnes/directorytodatabase' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '3fb33001213e6837745a285636e2798038b7e1cc',
+      'reference' => '605e88075529ac09bbb64fc63a47681bed3410d7',
     ),
   ),
 );
