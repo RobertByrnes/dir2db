@@ -6,12 +6,14 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "dir2db\\": "src\\"
+            "dir2db\\": "src\\",
+            "dir2db\\deployment\\": ""
         }
     },
     "scripts": {
         "post-package-install": [
-            "@composer dumpautoload -o"
+            "@composer dumpautoload -o",
+            "dir2db\\deployment\\Deploy::postPackageInstall"
         ]
     }
 }
