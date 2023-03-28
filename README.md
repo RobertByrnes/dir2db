@@ -6,6 +6,8 @@
 - Certain named directories may be excluded from the search, again by passing in regex through cmd (see help in dir2db.php)
 
 ## Setup
+Install with ```composer require robertbyrnes/dir2db```
+
 Use dir2db.sql to install ```php_files_complete``` table to a mySQL database.
 
 For example run
