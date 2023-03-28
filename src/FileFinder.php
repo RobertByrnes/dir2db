@@ -1,4 +1,11 @@
 <?php
+
+namespace dir2db;
+
+use RecursiveIteratorIterator;
+use RecursiveDirectoryIterator;
+use RegexIterator;
+
 /**
  * Trait FileFinder uses PHP's recursive iterator classes to search for PHP files in a directory
  * structure returning an array of results.

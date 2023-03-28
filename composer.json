@@ -2,13 +2,16 @@
     "name": "robertbyrnes/dir2db",
     "description": "Uses PHP recursive iterator classes and regex iterator class to recursively search directories for .php files.",
     "license": "GPL-3.0-or-later",
-    "require": {
-        "robertbyrnes/dataconnection": "dev-master@dev"
-    },
+    "require": {},
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "": "classes/"
+            "dir2db\\": "src\\"
         }
+    },
+    "scripts": {
+        "post-package-install": [
+            "@composer dumpautoload -o"
+        ]
     }
 }

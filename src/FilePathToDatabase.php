@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+namespace dir2db;
 
 /**
  * Class FilePathToDatabase uses Triat FileFinder to recursively search a directory structure

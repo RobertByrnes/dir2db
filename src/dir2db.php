@@ -1,6 +1,8 @@
 <?php
 
-require_once('vendor/autoload.php');
+namespace dir2db;
+
+require_once(__DIR__.'/../vendor/autoload.php');
 
 print("
                         ______     _             _____    ______   ______     
