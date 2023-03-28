@@ -1,1 +1,3 @@
-classes/FileFinder2.php
+.vscode
+vendor/
+local.ini
