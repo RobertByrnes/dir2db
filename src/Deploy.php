@@ -2,12 +2,9 @@
 
 namespace dir2db;
 
-use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
-
 class Deploy
 {
-    public static function postPackageInstall($event)
+    public static function postPackageInstall(): void
     {   
         if (!is_dir(__DIR__.'/../private') && !mkdir(__DIR__.'/../private') && !is_dir(__DIR__.'/../private')) {
             throw new \RuntimeException(sprintf('Directory "%s" was not created', '../private'));
@@ -18,3 +15,5 @@ class Deploy
         }
     }
 }
+
+Deploy::postPackageInstall();

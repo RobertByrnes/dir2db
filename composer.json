@@ -12,9 +12,9 @@
         }
     },
     "scripts": {
-        "post-package-install": [
+        "deploy-ini": [
             "@composer dumpautoload -o",
-            "dir2db\\Deploy::postPackageInstall"
+            "@php src/Deploy.php"
         ]
     }
 }
