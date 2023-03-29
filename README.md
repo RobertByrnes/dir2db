@@ -14,7 +14,7 @@ Use dir2db.sql to install ```php_files_complete``` table to a mySQL database.
 For example run
 ```mysql -u {$databaseUser} -p {$databaseName} < dir2db.sql```
 
-Edit local.ini to include correct database credentials and move this file to a directory named private one level up from the package ```src``` directory.
+Edit ./private/local.ini to include correct database credentials.
 
 ## Useage
 In CMD/terminal type 'php dir2db.php', this will show the help menu:
