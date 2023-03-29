@@ -15,7 +15,7 @@ print("
 ");
 print("
                                             .----.______
-                                            | v1.0.7    |
+                                            | v1.0.8    |
                                             |    ___________
                                             |   /          /
                                             |  /          /
@@ -24,7 +24,7 @@ print("
 
 ");
 
-$shortopts = "p:r::e::h";
+$shortopts = "p:r:e::h";
 
 $longopts = array(
     "path:",

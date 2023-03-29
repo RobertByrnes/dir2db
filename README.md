@@ -23,15 +23,17 @@ In CMD/terminal type 'php dir2db.php', this will show the help menu:
     Required arguments:
         -p path, e.g. c:/wamp/www/
     Optional arguments: 
-        -r regex, to filter file search to only include certain file extension. Default: /\.(?:php)$/ *Do not wrap in quotes* 
+        -r regex, to filter file search to only include certain file extension. Default: /\.(?:php)$/
         -e exclusions, directories ommited during search e.g. vendor|node_modules|private *Must include pipe*
         -h help, prints this help message.";
 ```
 ## Examples
 1. php dir2db.php -p c:/wamp/www/repositories
-2. php dir2db.php -p c:/wamp/www/repositories -r /\.(?:txt)$/
-3. php dir2db.php -p c:/wamp/www/repositories -r /\.(?:txt)$/ -e vendor|node_modules
+2. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/"
+3. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/" -e vendor|node_modules
+4. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt|ini|sql)$/" -e vendor|node_modules
 
 - Example 1 will search all directories within repositories for php files
 - Example 2 will search for .txt file within repositories
 - Example as example 2, excluding anything within directories named 'vendor' or 'node_modules'
+- Example four show an example of using the regex to include multiple file extensions

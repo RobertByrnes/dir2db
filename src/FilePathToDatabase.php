@@ -38,8 +38,8 @@ class FilePathToDatabase extends DataConnection
     public function __construct($path, $exludeDirs=null, $regex=null)
     {
         parent::__construct();
-        echo "\n[+] Searching directories for .php files\n\n";
-        $this->files = $this->fileFinder($path, $exludeDirs, $regex);
+        echo "\n[+] Searching directories for files\n\n";
+        $this->files = $this->fileFinder($path, $regex, $exludeDirs);
         if (count($this->files) > 0) {
             $count = count($this->files);
             print("[+] ".$count." Files found.\n\n");
