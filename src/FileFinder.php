@@ -10,14 +10,14 @@ use RegexIterator;
  * Trait FileFinder uses PHP's recursive iterator classes to search for PHP files in a directory
  * structure returning an array of results.
  */
-Trait FileFinder
+trait FileFinder
 {
     /**
      * Directory names to exclude from the search.
      * 
      * @var string
      */
-    public string $directoryFilter = '/smarty|vendor|node_modules|deepscripts|blackeye|phpBrute|phpChart_light|parallel/i';
+    public string $directoryFilter = '/vendor|node_modules/i';
 
     /**
      * Regex to find PHP file extension.
@@ -34,16 +34,16 @@ Trait FileFinder
      * @param string $directoryFilter
      * @return array
      */
-    public function fileFinder(string $path, string $fileFilter=NULL, string $directoryFilter=NULL) : array
+    public function fileFinder(string $path, string $fileFilter=null, string $directoryFilter=null) : array
     {
-        if (!is_null($fileFilter))
-        {
+        if (!is_null($fileFilter)) {
             $this->fileFilter = $fileFilter;
         }
-        if (!is_null($directoryFilter))
-        {
+
+        if (!is_null($directoryFilter)) {
             $this->directoryFilter = $directoryFilter;
         }
+
         return $this->recursiveRegexIterator($path);
     }
 
@@ -60,21 +60,17 @@ Trait FileFinder
         
         $files = array();
         
-        foreach ($phpFile as $info)
-        {
-            if(!preg_match($this->directoryFilter, $info))
-            {
+        foreach ($phpFile as $info) {
+            if (!preg_match($this->directoryFilter, $info)) {
                 $files[] = $info->getPathname();
             }
         }
-        if (!empty($files))
-        {
+
+        if (!empty($files)) {
             return $files;
         }
-        else
-        {
-            $files[] = 'No files discovered within search parameters.';
-            return $files;
-        }
+
+        $files[] = 'No files discovered within search parameters.';
+        return $files;
     }
 }

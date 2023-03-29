@@ -25,25 +25,27 @@ class FilePathToDatabase extends DataConnection
      */
     public int $errorCount;
 
+    /**
+     * A recursive iterator.
+     *
+     * @var FileFinder
+     */
     private FileFinder $fileFinder;
 
     /**
      * Class Constructor.
      */
-    public function __construct($path, $exludeDirs=NULL, $regex=NULL)
+    public function __construct($path, $exludeDirs=null, $regex=null)
     {
         parent::__construct();
         echo "\n[+] Searching directories for .php files\n\n";
         $this->files = $this->fileFinder($path, $exludeDirs, $regex);
-        if (count($this->files) > 0)
-        {
+        if (count($this->files) > 0) {
             $count = count($this->files);
             print("[+] ".$count." Files found.\n\n");
             sleep(2);
             $this->insertFilesToDatabase();
-        }
-        else
-        {
+        } else {
             print("[-] No files found, exiting.");
             exit;
         }
@@ -55,24 +57,20 @@ class FilePathToDatabase extends DataConnection
      *
      * @return void
      */
-    private function insertFilesToDatabase() : void
+    private function insertFilesToDatabase(): void
     {
         print("[+] Inserting files into database.\n\n");
         sleep(2);
         $this->errorCount = 0;
         $rowCount = 0;
-        foreach ($this->files as $file)
-        {
+        foreach ($this->files as $file) {
             $fileContents = file_get_contents($file);
             $tempRowCount = $this->preparedInsertGetCount("INSERT INTO `php_files_complete` (`file_path`, `complete_file`) VALUES (?, ?)", array($file, $fileContents));  
-            if ($tempRowCount === 0)
-            {
+            if ($tempRowCount === 0) {
                 ++$this->errorCount;
                 echo "[-] File inserted: ".$file."\n";
                 echo "[-] Error count: ".$this->errorCount."\n";
-            }
-            else
-            {
+            } else {
                 $rowCount += $tempRowCount;
                 echo "[+] File inserted: ".$file."\n";
                 echo "[+] Row count: ".$rowCount."\n";
@@ -89,14 +87,13 @@ class FilePathToDatabase extends DataConnection
      * @param string $file
      * @return void
      */
-    public function getClassNameFromFile($file) : void
+    public function getClassNameFromFile(string $file): void
     {
         error_reporting(~E_NOTICE & ~E_WARNING); 
         $pointer = fopen($file, 'r');
         $class = $namespace = $buffer = '';
         $i = 0;
-        while (!$class)
-        {
+        while (!$class) {
             if (feof($pointer)) break;
 
             $buffer .= fread($pointer, 512);
@@ -104,41 +101,32 @@ class FilePathToDatabase extends DataConnection
 
             if (strpos($buffer, '{') === FALSE) continue;
 
-            for (;$i<count($tokens);$i++)
-            {
-                if ($tokens[$i][0] === T_NAMESPACE)
-                {
-                    for ($j=$i+1;$j<count($tokens); $j++)
-                    {
-                        if ($tokens[$j][0] === T_STRING)
-                        {
+            for (;$i<count($tokens);$i++) {
+                if ($tokens[$i][0] === T_NAMESPACE) {
+                    for ($j=$i+1;$j<count($tokens); $j++) {
+                        if ($tokens[$j][0] === T_STRING) {
                             $namespace .= '\\'.$tokens[$j][1];
-                        }
-                        else if ($tokens[$j] === '{' || $tokens[$j] === ';')
-                        {
+                        } else if ($tokens[$j] === '{' || $tokens[$j] === ';') {
                             break;
                         }
                     }
                 }
 
-                if ($tokens[$i][0] === T_CLASS)
-                {
-                    for ($j=$i+1;$j<count($tokens);$j++)
-                    {
-                        if ($tokens[$j] === '{')
-                        {
+                if ($tokens[$i][0] === T_CLASS) {
+                    for ($j=$i+1;$j<count($tokens);$j++) {
+                        if ($tokens[$j] === '{') {
                             $class = $tokens[$i+2][1];
                         }
                     }
                 }
             }
         }
-        if (is_string($class))
-        {
+
+        if (is_string($class)) {
             $this->preparedInsertGetCount("UPDATE `php_files_complete` SET class_name = ? WHERE `file_path` = ?", array($class, $file));
             return;
         }
+
         error_reporting(-1);
-        return;
     }
 }

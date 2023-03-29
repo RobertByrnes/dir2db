@@ -26,7 +26,7 @@ print("
 
 $shortopts = "p:r::e::h";
 
-$longopts  = array(
+$longopts = array(
     "path:",
     "regex:",
     "exclusions::",
@@ -35,17 +35,16 @@ $longopts  = array(
 
 $options = getopt($shortopts, $longopts);
 
-switch (TRUE)
-{
-    case isset($options['p']):     $path = $options['p']; break;
-    case isset($options['h']):     help(); break;
+switch (TRUE) {
+    case isset($options['p']): $path = $options['p']; break;
+    case isset($options['h']): help(); break;
 }
 
-(empty($options['e'])) ? $exludeDirs = NULL : $exludeDirs = $options['e'];
-(empty($options['r'])) ? $regex = NULL : $regex = $options['r'];
+(empty($options['e'])) ? $exludeDirs = null : $exludeDirs = $options['e'];
+(empty($options['r'])) ? $regex = null : $regex = $options['r'];
 (!empty($path)) ? run($path, $exludeDirs, $regex) : help();
 
-function run($path, $exludeDirs=NULL, $regex=NULL) : void
+function run($path, $exludeDirs=null, $regex=null) : void
 {
     $program = new FilePathToDatabase($path, $exludeDirs, $regex);
 }
