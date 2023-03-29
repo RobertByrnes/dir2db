@@ -7,7 +7,7 @@ use PDOException;
 use stdClass;
 
 /**
- * Class Dataconnection extends Environment. PDO database class.
+ * Class DataConnection extends Environment. PDO database class.
  */
 class DataConnection extends Environment
 {
@@ -34,7 +34,7 @@ class DataConnection extends Environment
 
     public function __construct()
     {
-        $GLOBALS = $this->parseIni();
+        $this->parseIni();
         $this->returnObject = new stdClass;
         $this->dbConnect();
     }
