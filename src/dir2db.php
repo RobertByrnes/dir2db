@@ -15,7 +15,7 @@ print("
 ");
 print("
                                             .----.______
-                                            | v1.0.8    |
+                                            | v1.0.9    |
                                             |    ___________
                                             |   /          /
                                             |  /          /
@@ -24,12 +24,12 @@ print("
 
 ");
 
-$shortopts = "p:r:e::h";
+$shortopts = "p:r:e:h";
 
 $longopts = array(
     "path:",
     "regex:",
-    "exclusions::",
+    "exclusions:",
     "help"
 );
 
@@ -55,7 +55,9 @@ function help() {
         -p path, e.g. c:/wamp/www/
     Optional arguments: 
         -r regex, to filter file search to only include certain file extension. Default: \"/\.(?:php)$/\"
-        -e exclusions, directories ommited during search e.g. vendor|node_modules|private *Must include pipe*
+        -r regex, to filter file search to only include certain file extension. Multiple: \"/\.(?:php|sql|ini|log|txt)$/\"
+        -e exclusions, directories ommited during search e.g. vendor
+        -e exclusions, directories ommited during search e.g. vendor|node_modules|private *Must include pipe if multiple* 
         -h help, prints this help message.";
     print("\n".$helpMessage."\n");
     print("\n    Dir2DB, written by Robert Byrnes,

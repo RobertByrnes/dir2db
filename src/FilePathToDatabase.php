@@ -77,7 +77,7 @@ class FilePathToDatabase extends DataConnection
             }
             $this->getClassNameFromFile($file);  
         }
-        print("[+] Script execution complete, exiting.");
+        print("[+] Script execution complete, exiting.\n");
     }
 
     /**

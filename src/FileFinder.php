@@ -45,7 +45,8 @@ trait FileFinder
         } else {
             $this->directoryFilter = null;
         }
-
+//         var_dump($directoryFilter);
+// var_dump($this->directoryFilter);die();
         return $this->recursiveRegexIterator($path);
     }
 
