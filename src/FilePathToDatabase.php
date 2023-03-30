@@ -59,16 +59,28 @@ class FilePathToDatabase extends DataConnection
      */
     private function insertFilesToDatabase(): void
     {
-        print("[+] Inserting files into database.\n\n");
+        print("[+] Attempting to insert files into database.\n\n");
         sleep(2);
         $this->errorCount = 0;
         $rowCount = 0;
         foreach ($this->files as $file) {
+            if (!file_exists($file)) {
+                echo "[-] File @: ".$file." does not exist!\n";
+                continue;
+            }
+
             $fileContents = file_get_contents($file);
+
+            if ($fileContents === false) {
+                echo "[-] Couldn;t get file contents for file @: ".$file."\n";
+                continue;
+            }
+
             $tempRowCount = $this->preparedInsertGetCount("INSERT INTO `php_files_complete` (`file_path`, `complete_file`) VALUES (?, ?)", array($file, $fileContents));  
+            
             if ($tempRowCount === 0) {
                 ++$this->errorCount;
-                echo "[-] File inserted: ".$file."\n";
+                echo "[-] File insert failed: ".$file."\n";
                 echo "[-] Error count: ".$this->errorCount."\n";
             } else {
                 $rowCount += $tempRowCount;
