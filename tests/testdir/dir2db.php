@@ -44,11 +44,13 @@ switch (TRUE) {
 (empty($options['r'])) ? $regex = null : $regex = $options['r'];
 (!empty($path)) ? run($path, $exludeDirs, $regex) : help();
 
-function run($path, $exludeDirs=null, $regex=null) : void {
+function run($path, $exludeDirs=null, $regex=null) : void
+{
     $program = new FilePathToDatabase($path, $exludeDirs, $regex);
 }
 
-function help() {
+function help()
+{
     $helpMessage = "\n
     /*** ARGUMENTS ***/\n
     Required arguments:

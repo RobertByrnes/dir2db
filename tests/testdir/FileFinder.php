@@ -17,7 +17,7 @@ trait FileFinder
      * 
      * @var string
      */
-    public string $directoryFilter = 'vendor|node_modules';
+    public string $directoryFilter = '/vendor|node_modules/i';
 
     /**
      * Regex to find PHP file extension.
@@ -41,7 +41,7 @@ trait FileFinder
         }
 
         if (!is_null($directoryFilter)) {
-            $this->directoryFilter = '/'.$directoryFilter.'/i';
+            $this->directoryFilter = $directoryFilter;
         }
 
         return $this->recursiveRegexIterator($path);
@@ -56,11 +56,11 @@ trait FileFinder
     public function recursiveRegexIterator(string $path) : array
     {
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
-        $file = new RegexIterator($iterator, $this->fileFilter);
+        $phpFile = new RegexIterator($iterator, $this->fileFilter);
         
         $files = array();
-        // die($this->directoryFilter);
-        foreach ($file as $info) {
+        
+        foreach ($phpFile as $info) {
             if (!preg_match($this->directoryFilter, $info)) {
                 $files[] = $info->getPathname();
             }
