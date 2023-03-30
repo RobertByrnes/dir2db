@@ -54,16 +54,16 @@ In CMD/terminal type 'php dir2db.php', this will show the help menu:
         -h help, prints this help message.";
 ```
 ## Examples
-1. php dir2db.php -p c:/wamp/www/repositories
-2. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/"
-3. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/" -e vendor|node_modules
-4. php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt|ini|sql)$/" -e vendor|node_modules
+1. `php dir2db.php -p c:/wamp/www/repositories`
+2. `php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/"`
+3. `php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt)$/" -e vendor|node_modules`
+4. `php dir2db.php -p c:/wamp/www/repositories -r "/\.(?:txt|ini|sql)$/" -e vendor|node_modules`
 
 - Example 1 will search all directories within repositories for php files
 - Example 2 will search for .txt file within repositories
 - Example as example 2, excluding anything within directories named 'vendor' or 'node_modules'
 - Example four show an example of using the regex to include multiple file extensions
-- 
+
 ## FileFinder Trait
 
 The FileFinder trait uses PHP's recursive iterator classes to search for files in a directory structure returning an array of results.
