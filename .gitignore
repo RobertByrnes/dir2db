@@ -1,3 +1,5 @@
-.vscode
+.vscode/
 vendor/
 private/local.ini
+.idea/
+.phpunit.cache/
