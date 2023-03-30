@@ -11,6 +11,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: testdir contains
+        run: ls /home/runner/work/dir2db/dir2db/tests/testdir
+
       - name: Install composer dependencies
         run: composer install --no-scripts
 
