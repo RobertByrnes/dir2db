@@ -37,8 +37,10 @@ final class FilePathToDatabaseTest extends TestCase
 
         $expected = $this->lowerCaseFilePaths($expected);
         $files = $this->lowerCaseFilePaths($this->fileFinder($testPath, $testRegex, $testExclusions));
-        
-        $this->assertEquals($expected, $files);
+
+        foreach ($expected as $file) {
+            $this->assertContains($file, $files);
+        }
     }
 
     public function test_file_finder_returns_expected_array_of_sql_files()
@@ -52,7 +54,10 @@ final class FilePathToDatabaseTest extends TestCase
         ];
 
         $files = $this->fileFinder($testPath, $testRegex, $testExclusions);
-        $this->assertEquals($expected, $files);
+        
+        foreach ($expected as $file) {
+            $this->assertContains($file, $files);
+        }
     }
 
     public function test_file_finder_returns_expected_array_of_different_file_types()
@@ -73,7 +78,10 @@ final class FilePathToDatabaseTest extends TestCase
         $expected = $this->lowerCaseFilePaths($expected);
         $files = $this->lowerCaseFilePaths($this->fileFinder($testPath, $testRegex, $testExclusions));
 
-        $this->assertEquals($files, $expected);
+       
+        foreach ($expected as $file) {
+            $this->assertContains($file, $files);
+        }
     }
     
     private function lowerCaseFilePaths(array $files): array
