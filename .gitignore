@@ -1,5 +1,6 @@
 .vscode/
 vendor/
+!tests/testdir/vendor
 private/local.ini
 .idea/
 .phpunit.result.cache
