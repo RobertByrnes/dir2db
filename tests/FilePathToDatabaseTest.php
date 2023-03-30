@@ -30,9 +30,9 @@ final class FilePathToDatabaseTest extends TestCase
 
         $expectedResult = [
             $testPath.$this->dirSeparator.'dir2db.php',
-            $testPath.$this->dirSeparator.'Environment.php',
-            $testPath.$this->dirSeparator.'FileFinder.php',
-            $testPath.$this->dirSeparator.'FilePathToDatabase.php'
+            $testPath.$this->dirSeparator.'environment.php',
+            $testPath.$this->dirSeparator.'filefinder.php',
+            $testPath.$this->dirSeparator.'filepathtodatabase.php'
         ];
 
         $files = $this->fileFinder($testPath, $testRegex, $testExclusions);
@@ -62,9 +62,9 @@ final class FilePathToDatabaseTest extends TestCase
         $expectedResult = [
             $testPath.$this->dirSeparator.'dir2db.php',
             $testPath.$this->dirSeparator.'dir2db.sql',
-            $testPath.$this->dirSeparator.'Environment.php',
-            $testPath.$this->dirSeparator.'FileFinder.php',
-            $testPath.$this->dirSeparator.'FilePathToDatabase.php',
+            $testPath.$this->dirSeparator.'environment.php',
+            $testPath.$this->dirSeparator.'filefinder.php',
+            $testPath.$this->dirSeparator.'filepathtodatabase.php',
             $testPath.$this->dirSeparator.'local.ini.example'
         ];
 
