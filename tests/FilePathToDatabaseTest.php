@@ -22,7 +22,7 @@ final class FilePathToDatabaseTest extends TestCase
         $this->argv = explode(',', $_SERVER['argv']);
     }
 
-    public function test_file_finder_returns_expected_array_of_php_files()
+    public function test_file_finder_returns_expected_array_of_php_files(): void
     {
         $testPath = __DIR__.$this->argv[0];
         $testRegex = $this->argv[1];
@@ -43,7 +43,7 @@ final class FilePathToDatabaseTest extends TestCase
         }
     }
 
-    public function test_file_finder_returns_expected_array_of_sql_files()
+    public function test_file_finder_returns_expected_array_of_sql_files(): void
     {
         $testPath = __DIR__.$this->argv[0];
         $testRegex = '/\.(?:sql)$/';
@@ -60,7 +60,7 @@ final class FilePathToDatabaseTest extends TestCase
         }
     }
 
-    public function test_file_finder_returns_expected_array_of_different_file_types()
+    public function test_file_finder_returns_expected_array_of_different_file_types(): void
     {
         $testPath = __DIR__.$this->argv[0];
         $testRegex = '/\.(?:sql|php|example)$/';
@@ -78,7 +78,27 @@ final class FilePathToDatabaseTest extends TestCase
         $expected = $this->lowerCaseFilePaths($expected);
         $files = $this->lowerCaseFilePaths($this->fileFinder($testPath, $testRegex, $testExclusions));
 
-       
+        foreach ($expected as $file) {
+            $this->assertContains($file, $files);
+        }
+    }
+
+    public function test_no_directory_exclusion_if_null(): void
+    {
+        $testPath = __DIR__.$this->argv[0];
+        $testRegex = $this->argv[1];    
+        
+        $expected = [
+            $testPath.$this->dirSeparator.'dir2db.php',
+            $testPath.$this->dirSeparator.'Environment.php',
+            $testPath.$this->dirSeparator.'FileFinder.php',
+            $testPath.$this->dirSeparator.'FilePathToDatabase.php',
+            $testPath.$this->dirSeparator.'vendor/dir2db.php'
+        ];     
+        
+        $expected = $this->lowerCaseFilePaths($expected);
+        $files = $this->lowerCaseFilePaths($this->fileFinder($testPath, $testRegex));
+
         foreach ($expected as $file) {
             $this->assertContains($file, $files);
         }
