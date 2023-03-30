@@ -1,3 +1,29 @@
+<h1 align="center">dir2db</h1>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/made%20by-RobertByrnes-blue.svg" >
+
+<img src="https://img.shields.io/badge/stability-wip-red.svg" >
+
+<!-- <img src="https://img.shields.io/npm/v/vue2-baremetrics-calendar">
+
+<img src="https://img.shields.io/badge/vue-2.6.10-green.svg"> -->
+
+<!-- <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
+
+<img src="https://img.shields.io/github/stars/silent-lad/Vue2BaremetricsCalendar.svg?style=flat">
+
+<img src="https://img.shields.io/github/languages/top/silent-lad/Vue2BaremetricsCalendar.svg">
+
+<img src="https://img.shields.io/github/issues/silent-lad/Vue2BaremetricsCalendar.svg"> -->
+
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat">
+</p>
+
+![dir2db!](dir2db.jpg?raw=true "dir2db!")
+
+
 # dir2db
 - Uses PHP recursive iterator classes and regex iterator class to recursively search directories for .php files.
 
@@ -37,3 +63,23 @@ In CMD/terminal type 'php dir2db.php', this will show the help menu:
 - Example 2 will search for .txt file within repositories
 - Example as example 2, excluding anything within directories named 'vendor' or 'node_modules'
 - Example four show an example of using the regex to include multiple file extensions
+- 
+## FileFinder Trait
+
+The FileFinder trait uses PHP's recursive iterator classes to search for files in a directory structure returning an array of results.
+
+## Usage
+
+To use the FileFinder trait, call the `fileFinder` method with the following parameters:
+
+- `$path` - The path to the directory you want to search
+- `$fileFilter` (optional) - A regex to find PHP file extensions
+- `$directoryFilter` (optional) - Directory names to exclude from the search
+
+The `fileFinder` method will then return an array of results.
+## Wish List
+- Refactor .sql file to not be file type specific, e.g. rename column `content` rather than `php_files_complete`
+- Extend tests to cover FilePathToDatabase.php
+
+
+![Files!](files.png?raw=true "Files!")

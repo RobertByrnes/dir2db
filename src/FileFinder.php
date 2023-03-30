@@ -7,7 +7,7 @@ use RecursiveDirectoryIterator;
 use RegexIterator;
 
 /**
- * Trait FileFinder uses PHP's recursive iterator classes to search for PHP files in a directory
+ * Trait FileFinder uses PHP's recursive iterator classes to search for files in a directory
  * structure returning an array of results.
  */
 trait FileFinder

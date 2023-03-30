@@ -3,10 +3,9 @@
 declare(strict_types=1);
 
 use dir2db\FileFinder;
-use dir2db\FilePathToDatabase;
 use PHPUnit\Framework\TestCase;
 
-final class FilePathToDatabaseTest extends TestCase
+final class FileFinderTest extends TestCase
 {
     use FileFinder;
 
