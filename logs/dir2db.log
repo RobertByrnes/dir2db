@@ -1,0 +1,7 @@
+2023-03-31T22:18:54+00:00 [ERROR] : SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+#0 C:\git-repos\dir2db\src\DataConnection.php(38): PDO->__construct('mysql:dbname=di...', 'homestead', Object(SensitiveParameterValue))
+#1 C:\git-repos\dir2db\src\DataConnection.php(24): dir2db\DataConnection->dbConnect()
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(23): dir2db\DataConnection->__construct()
+#3 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('C:\\git-repos\\di...', NULL, NULL)
+#4 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('C:\\git-repos\\di...', NULL, NULL)
+#5 {main}

@@ -3,175 +3,107 @@
 namespace dir2db;
 
 use PDO;
+use PDOStatement;
 use PDOException;
-use stdClass;
 
 /**
  * Class DataConnection extends Environment. PDO database class.
  */
 class DataConnection extends Environment
 {
-    /**
-     * Object of PDO class.
-     *
-     * @var object
-     */
-    protected $dB;
+    /** Object of PDO class @var Pdo */
+    protected Pdo $dB;
 
-    /**
-     * Class messages for debugging.
-     *
-     * @var string
-     */
-    protected $message;
-
-    /**
-     * A stdCLass object for use in type hinted functions.
-     *
-     * @var stdClass
-     */
-    private $returnObject;
+    /** Object of Logger class @var Logger */
+    private Logger $logger;
 
     public function __construct()
     {
         $this->parseIni();
-        $this->returnObject = new stdClass;
+        $this->logger = new Logger('dir2db');
         $this->dbConnect();
     }
     
     /**
-     * Uses the database credentials to establish and set a property containing a PDO connection.
-     *
+     * Uses the database credentials to establish and set a 
+     * property containing a PDO connection.
+     * 
+     * @throws Dir2dbException
+     * 
      * @return bool
      */
-    private function dbConnect() : bool
+    private function dbConnect(): bool
     {
-        try
-        {
+        try {
             $this->dB = new PDO($GLOBALS['dsn'], $GLOBALS['username'], $GLOBALS['password']);
             $this->dB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	        $this->dB->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE); 
-            $this->message = 'Database connection success.';
-            return TRUE;
+	        $this->dB->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        } catch(PDOException $e) { 
+            $this->logExceptionBeforeThrowingDir2dbException($e);
         }
-
-        catch(PDOException $error)
-        { 
-            $this->message = 'Database connection error: '.$error;
-            return FALSE;
-        }
+        return true;
     }
 
     /**
      * Safe way to fetch results from a single row using a PDO connection.
-     * If return type is TRUE this functions returns an array, otherwise
+     * If return type is true this functions returns an array, otherwise
      * it returns an object of stdClass.
      *
      * @param string $query
-     * @param $array
-     * @param boolean $returnType
-     * @return object, array, or bool
+     * @param ?array $array
+     * @param bool $returnType
+     * 
+     * @throws Dir2dbException
+     * 
+     * @return object|array
      */
-    public function preparedQueryRow(string $query, array $array=NULL, bool $returnType=FALSE)
+    public function preparedQueryRow(string $query, array $array=null, bool $returnType=false): object|array
     {
-        try
-        {
-            $stmt = $this->dB->prepare($query);
-            if ($array)
-            {
-                foreach ($array as $key => $value)
-                {
-                    if (is_numeric($value))
-                    {
-                        $stmt->bindParam($key, $value, PDO::PARAM_INT);
-                    }
-                    else
-                    {
-                        $stmt->bindParam($key, $value, PDO::PARAM_STR);
-                    }
-                }
-            }   
-            if (!$returnType)
-            {
-                $stmt->execute();
+        try {
+            $stmt = $this->prepareStatement($query, $array); 
+            $stmt->execute();
+
+            if (!$returnType) {
                 $result = $stmt->fetch(PDO::FETCH_OBJ);
-                return $result;
-            }
-            else
-            {
-                $stmt->execute();
+            } else {
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return $result;
             }
+        } catch (PDOException $e) {
+            $this->logExceptionBeforeThrowingDir2dbException($e);
         }
-        catch (PDOException $error)
-        {
-            $this->message = 'Database query failed: '.$error;
-            if (!$returnType)
-            {
-                return $this->returnObject->failure = 'check class DataConnection error messages.';
-            }
-            else
-            {
-                return array('message' => 'Database query failed.');
-            }
-        }
+
+        return $result;
     }
 
     /**
      * Safe way to fetch results from multiple rows using a PDO connection.
-     * If return type is TRUE this functions returns an array, otherwise
+     * If return type is true this functions returns an array, otherwise
      * it returns an object of stdClass.
      *
      * @param string $query
-     * @param array $array
+     * @param ?array $array
      * @param boolean $returnType
-     * @return object, array or bool
+     * 
+     * @throws Dir2dbException
+     * 
+     * @return object|array
      */
-    public function preparedQueryMany(string $query, $array=NULL, bool $returnType=FALSE)
+    public function preparedQueryMany(string $query, array $array=null, bool $returnType=false): object|array
     {
-        try
-        {
-            $stmt = $this->dB->prepare($query);
-            if ($array)
-            {
-                foreach ($array as $key => $value)
-                {
-                    if (is_numeric($value))
-                    {
-                        $stmt->bindParam($key, $value, PDO::PARAM_INT);
-                    }
-                    else
-                    {
-                        $stmt->bindParam($key, $value, PDO::PARAM_STR);
-                    }
-                }
-            }
-            if (!$returnType)
-            {
-                $stmt->execute();
+        try {      
+            $stmt = $this->prepareStatement($query, $array); 
+            $stmt->execute();
+
+            if (!$returnType) {
                 $result = $stmt->fetchAll(PDO::FETCH_OBJ);
-                return $result;
-            }
-            else
-            {
-                $stmt->execute();
+            } else {
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                return $result;
             }
+        } catch (PDOException $e) {
+            $this->logExceptionBeforeThrowingDir2dbException($e);
         }
-        catch (PDOException $error)
-        {
-            $this->message = 'Database query failed: '.$error;
-            if (!$returnType)
-            {
-                return self::$returnObject->failure = 'check class Database error message';
-            }
-            else
-            {
-                return array('message' => 'Database query failed');
-            }
-        }
+        
+        return $result;
     }
 
     /**
@@ -179,30 +111,26 @@ class DataConnection extends Environment
      * 
      * @example ("INSERT INTO table (column, column, column) VALUES (?, ?, ?)",
      * array('column' => $var, 'column' => $var, 'column' => $var));
+     * 
      * @param string $query
      * @param array $params
-     * @return bool
-     * @return integer
+     * 
+     * @throws Dir2dbException
+     * 
+     * @return bool|int
      */
-    public function preparedInsert(string $query, array $params=NULL, bool $countRequired=FALSE)
+    public function preparedInsert(string $query, array $params=null, bool $countRequired=false): bool|int
     {
-        try
-        {
+        try {
             $stmt = $this->dB->prepare($query);
-            if ($countRequired)
-            {
+            if ($countRequired) {
                 $stmt->execute($params);
                 return $stmt->rowCount();
-            }
-            else
-            {
+            } else {
                 return $stmt->execute($params);
             }
-        }
-        catch (PDOException $error)
-        {
-            $this->message = 'Database query failed: '.$error;
-            return FALSE;
+        } catch (PDOException $e) {
+            $this->logExceptionBeforeThrowingDir2dbException($e);
         }
     }
 
@@ -211,15 +139,42 @@ class DataConnection extends Environment
      *
      * @param string $query
      * @param array $params
+     * 
+     * @throws Dir2dbException
+     * 
      * @return int
      */
-    public function preparedInsertGetCount(string $query, array $params=NULL) : int
+    public function preparedInsertGetCount(string $query, array $params=null): int
     {
-        return $this->preparedInsert($query, $params, TRUE);
+        return $this->preparedInsert($query, $params, true);
     }
 
-    public function getMessage()
+    /**
+     * Returns a PDOStatement object with bound parameters.
+     *
+     * @param string $query
+     * @param array|null $array
+     * 
+     * @return PDOStatement
+     */
+    private function prepareStatement(string $query, array $array=null): PDOStatement
     {
-        return $this->message;
+        $stmt = $this->dB->prepare($query);
+        if ($array) {
+            foreach ($array as $key => $value) {
+                if (is_numeric($value)) {
+                    $stmt->bindParam($key, $value, PDO::PARAM_INT);
+                } else {
+                    $stmt->bindParam($key, $value, PDO::PARAM_STR);
+                }
+            }
+        }
+        return $stmt;
+    }
+
+    private function logExceptionBeforeThrowingDir2dbException(PDOException $e): void
+    {
+        $this->logger->error($e->getMessage() . PHP_EOL . $e->getTraceAsString());
+        throw new Dir2dbException($e->getMessage(), $e->getCode(), $e->getPrevious());
     }
 }

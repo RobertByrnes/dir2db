@@ -3,7 +3,7 @@
     "description": "Uses PHP recursive iterator classes and regex iterator class to recursively search directories for .php files.",
     "license": "GPL-3.0-or-later",
     "require": {
-        "php": ">=7.4|>=8.1"
+        "php": ">=8.1"
     },
     "require-dev": {
         "mockery/mockery": "^1.5",
