@@ -18,30 +18,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `test_enviro`
+-- Database: `database_name`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `php_files_complete`
+-- Table structure for table `dir2db_content`
 --
 
-CREATE TABLE `php_files_complete` (
+CREATE TABLE `dir2db_content` (
   `id` int(11) NOT NULL,
   `class_name` varchar(50) NOT NULL DEFAULT '',
   `file_path` text NOT NULL,
-  `complete_file` longtext NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `file_content` longtext NULL,
+  `binary_file_content` longblob NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `php_files_complete`
+-- Indexes for table `dir2db_content`
 --
-ALTER TABLE `php_files_complete`
+ALTER TABLE `dir2db_content`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,10 +50,14 @@ ALTER TABLE `php_files_complete`
 --
 
 --
--- AUTO_INCREMENT for table `php_files_complete`
+-- AUTO_INCREMENT for table `dir2db_content`
 --
-ALTER TABLE `php_files_complete`
+ALTER TABLE `dir2db_content`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `dir2db_content` 
+  CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -82,7 +82,7 @@ class DataConnection extends Environment
      *
      * @param string $query
      * @param ?array $array
-     * @param boolean $returnType
+     * @param bool $returnType
      * 
      * @throws Dir2dbException
      * 
@@ -172,9 +172,18 @@ class DataConnection extends Environment
         return $stmt;
     }
 
+    /**
+     * Logs the exception message and trace before throwing a new Dir2dbException.
+     *
+     * @param PDOException $e
+     * 
+     * @throws Dir2dbException
+     * 
+     * @return void
+     */
     private function logExceptionBeforeThrowingDir2dbException(PDOException $e): void
     {
         $this->logger->error($e->getMessage() . PHP_EOL . $e->getTraceAsString());
-        throw new Dir2dbException($e->getMessage(), $e->getCode(), $e->getPrevious());
+        throw new Dir2dbException($e->getMessage(), -1, $e->getPrevious());
     }
 }

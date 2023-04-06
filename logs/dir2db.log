@@ -5,3 +5,393 @@
 #3 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('C:\\git-repos\\di...', NULL, NULL)
 #4 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('C:\\git-repos\\di...', NULL, NULL)
 #5 {main}
+2023-04-03T20:03:56+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', NULL, NULL)
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', NULL, NULL)
+#6 {main}
+2023-04-03T20:05:34+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-03T20:09:48+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-03T20:15:26+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', NULL, '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-03T20:17:47+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', NULL, '/\\.(?:txt)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', NULL, '/\\.(?:txt)$/')
+#6 {main}
+2023-04-03T20:19:58+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/da...', NULL, NULL)
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/da...', NULL, NULL)
+#6 {main}
+2023-04-06T19:33:56+00:00 [ERROR] : SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+#0 C:\git-repos\dir2db\src\DataConnection.php(38): PDO->__construct('mysql:dbname=di...', 'homestead', Object(SensitiveParameterValue))
+#1 C:\git-repos\dir2db\src\DataConnection.php(24): dir2db\DataConnection->dbConnect()
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(23): dir2db\DataConnection->__construct()
+#3 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#4 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 {main}
+2023-04-06T19:35:24+00:00 [ERROR] : SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+#0 C:\git-repos\dir2db\src\DataConnection.php(38): PDO->__construct('mysql:dbname=di...', 'homestead', Object(SensitiveParameterValue))
+#1 C:\git-repos\dir2db\src\DataConnection.php(24): dir2db\DataConnection->dbConnect()
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(23): dir2db\DataConnection->__construct()
+#3 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#4 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 {main}
+2023-04-06T19:38:17+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into latin1_swedish_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `ph...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(73): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `ph...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(35): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xD1\xF7_\xB1U...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xB5\xED\xAE\xFB\x0A3...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:21+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xFE\xFF\x00A\x00r...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x80\x81\x82\x83\x0A3...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x80\x81\x82\x83\x0A3...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xB5\xED\xAE\xFB\x0A3...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T19:57:22+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xAC\xDC \xAB\xBA\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:01:02+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:07:30+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into utf8mb3_general_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:07:49+00:00 [ERROR] : SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into utf8mb3_general_ci impossible for parameter
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:08:12+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:08:24+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:08:48+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:11:24+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:11:36+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:16:59+00:00 [ERROR] : SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xE3\xCF\xD3\x0D\x0A...' for column 'complete_file' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(71): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:27:48+00:00 [ERROR] : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'binary_file_content' in 'field list'
+#0 C:\git-repos\dir2db\src\DataConnection.php(125): PDO->prepare('INSERT INTO `di...')
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(77): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:28:19+00:00 [ERROR] : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'binary_file_content' in 'field list'
+#0 C:\git-repos\dir2db\src\DataConnection.php(125): PDO->prepare('INSERT INTO `di...')
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(77): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:29:50+00:00 [ERROR] : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'binary_file_content' in 'field list'
+#0 C:\git-repos\dir2db\src\DataConnection.php(125): PDO->prepare('INSERT INTO `di...')
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(77): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:31:12+00:00 [ERROR] : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'binary_file_content' in 'field list'
+#0 C:\git-repos\dir2db\src\DataConnection.php(125): PDO->prepare('INSERT INTO `di...')
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(77): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}
+2023-04-06T20:36:38+00:00 [ERROR] : SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'binary_file_content' at row 1
+#0 C:\git-repos\dir2db\src\DataConnection.php(127): PDOStatement->execute(Array)
+#1 C:\git-repos\dir2db\src\DataConnection.php(149): dir2db\DataConnection->preparedInsert('INSERT INTO `di...', Array, true)
+#2 C:\git-repos\dir2db\src\FilePathToDatabase.php(77): dir2db\DataConnection->preparedInsertGetCount('INSERT INTO `di...', Array)
+#3 C:\git-repos\dir2db\src\FilePathToDatabase.php(33): dir2db\FilePathToDatabase->insertFilesToDatabase()
+#4 C:\git-repos\dir2db\src\dir2db.php(48): dir2db\FilePathToDatabase->__construct('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#5 C:\git-repos\dir2db\src\dir2db.php(45): dir2db\run('c:/git-repos/di...', 'vendor|node_mod...', '/\\.(?:pdf)$/')
+#6 {main}

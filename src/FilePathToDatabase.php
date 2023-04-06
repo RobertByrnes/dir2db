@@ -1,8 +1,6 @@
 <?php
 
 namespace dir2db;
-
-use Dir2dbException;
 /**
  * Class FilePathToDatabase uses Triat FileFinder to recursively search a directory structure
  * for PHP files, inserting the contents into a database, reading any class names found.
@@ -66,8 +64,14 @@ class FilePathToDatabase extends DataConnection
                 echo "[-] Couldn't get file contents for file @: " . $file . PHP_EOL;
                 continue;
             }
+            
+            $supportedBinaries = ['pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico', 'bmp', 'tiff', 'tif', 'webp'];
 
-            $sql = "INSERT INTO `php_files_complete` (`file_path`, `complete_file`) VALUES (?, ?)";
+            if (in_array(explode('.', $file)[array_key_last(explode('.', $file))], $supportedBinaries)) {
+                $sql = "INSERT INTO `dir2db_content` (`file_path`, `binary_file_content`) VALUES (?, ?)";
+            } else {
+                $sql = "INSERT INTO `dir2db_content` (`file_path`, `file_content`) VALUES (?, ?)";
+            }
 
             try {
                 $tempRowCount = $this->preparedInsertGetCount($sql, array($file, $fileContents));  
@@ -120,26 +124,6 @@ class FilePathToDatabase extends DataConnection
                 continue;
             }
 
-            // for (;$i<count($tokens);$i++) {
-            //     if ($tokens[$i][0] === T_NAMESPACE) {
-            //         for ($j=$i+1;$j<count($tokens); $j++) {
-            //             if ($tokens[$j][0] === T_STRING) {
-            //                 $namespace .= '\\'.$tokens[$j][1];
-            //             } else if ($tokens[$j] === '{' || $tokens[$j] === ';') {
-            //                 break;
-            //             }
-            //         }
-            //     }
-
-            //     if ($tokens[$i][0] === T_CLASS) {
-            //         for ($j=$i+1;$j<count($tokens);$j++) {
-            //             if ($tokens[$j] === '{') {
-            //                 $class = $tokens[$i+2][1];
-            //             }
-            //         }
-            //     }
-            // }
-
             for ($i=0, $j=0;$i<count($tokens);$i++) {
                 if ($tokens[$i][0] === T_NAMESPACE) {
                     for ($j=$i+1;$j<count($tokens); $j++) {
@@ -159,7 +143,7 @@ class FilePathToDatabase extends DataConnection
         error_reporting(-1);
 
         if (!empty($class)) {
-            $sql = "UPDATE `php_files_complete` SET class_name = ? WHERE `file_path` = ?";
+            $sql = "UPDATE `dir2db_content` SET class_name = ? WHERE `file_path` = ?";
             try {
                 $this->preparedInsertGetCount($sql, array($class, $file));
             } catch (Dir2dbException $e) {

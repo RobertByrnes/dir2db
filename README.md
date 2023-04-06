@@ -35,7 +35,7 @@
 Install via ``` git clone https://github.com/RobertByrnes/dir2db.git ``` then cd into package root directory and run ``` composer deploy-ini ```
 
 
-Use dir2db.sql to install ```php_files_complete``` table to a mySQL database.
+Use dir2db.sql to install ```file_contents``` table to a mySQL database.
 
 For example run
 ```mysql -u {$databaseUser} -p {$databaseName} < dir2db.sql```
@@ -63,6 +63,13 @@ In CMD/terminal type 'php dir2db.php', this will show the help menu:
 - Example 2 will search for .txt file within repositories
 - Example as example 2, excluding anything within directories named 'vendor' or 'node_modules'
 - Example four show an example of using the regex to include multiple file extensions
+
+## Memory Limit!
+If you see a fatal exception - Allowed Memory Limit rerun your command explicity as below:
+- ```php .\dir2db.php -p c:/dir2db -r "/\.(?:jpg|png|pdf|php)$/" -e "vendor|node_modules"```
+- ``` php -d memory_limit=-1 .\dir2db.php -p c:/dir2db -r "/\.(?:jpg|png|pdf|php)$/" -e "vendor|node_modules"```
+  
+The ```-d memory_limit=-1``` will tell php to ignore the memory limit whilst executing this process.
 
 ## FileFinder Trait
 

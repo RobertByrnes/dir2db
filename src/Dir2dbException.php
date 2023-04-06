@@ -9,6 +9,7 @@ class Dir2dbException extends RuntimeException
 {
     public function __construct($message, $code = 0, Throwable $previous = null)
     {
+        // die(var_dump($message, $code, $previous));
         parent::__construct($message, $code, $previous);
     }
 
