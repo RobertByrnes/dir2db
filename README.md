@@ -61,21 +61,26 @@ In CMD/terminal type 'php dir2db.php', this will show the help menu:
 
 - Example 1 will search all directories within repositories for php files
 - Example 2 will search for .txt file within repositories
-- Example as example 2, excluding anything within directories named 'vendor' or 'node_modules'
-- Example four show an example of using the regex to include multiple file extensions
+- Example 3 as example 2, additionally excluding anything within directories named 'vendor' or 'node_modules'
+- Example 4 demonstrates using the regex to include multiple file extensions
 
 ## Memory Limit!
-If you see a fatal exception - Allowed Memory Limit rerun your command explicity as below:
+If you see a fatal exception - Allowed Memory Limit re-run your command explicity as shown below:
 - ```php .\dir2db.php -p c:/dir2db -r "/\.(?:jpg|png|pdf|php)$/" -e "vendor|node_modules"```
-- ``` php -d memory_limit=-1 .\dir2db.php -p c:/dir2db -r "/\.(?:jpg|png|pdf|php)$/" -e "vendor|node_modules"```
+- ```php -d memory_limit=-1 .\dir2db.php -p c:/dir2db -r "/\.(?:jpg|png|pdf|php)$/" -e "vendor|node_modules"```
   
 The ```-d memory_limit=-1``` will tell php to ignore the memory limit whilst executing this process.
 
+## A note on Binary file types
+- The following binary file types are supported:
+- 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico', 'bmp', 'tiff', 'tif', 'webp'
+- file contents for these files will be stored in the `binary_file_content` database column which is of `LONGBLOB` type.
+- Files not in this list are stored in the `file_content` column which is of `LONGTEXT` type. 
 ## FileFinder Trait
 
 The FileFinder trait uses PHP's recursive iterator classes to search for files in a directory structure returning an array of results.
 
-## Usage
+### Usage
 
 To use the FileFinder trait, call the `fileFinder` method with the following parameters:
 
@@ -84,9 +89,5 @@ To use the FileFinder trait, call the `fileFinder` method with the following par
 - `$directoryFilter` (optional) - Directory names to exclude from the search
 
 The `fileFinder` method will then return an array of results.
-## Wish List
-- Refactor .sql file to not be file type specific, e.g. rename column `content` rather than `php_files_complete`
-- Extend tests to cover FilePathToDatabase.php
-
 
 ![Files!](files.png?raw=true "Files!")

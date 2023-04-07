@@ -1,5 +1,6 @@
 {
     "name": "robertbyrnes/dir2db",
+    "version": "1.1.2",
     "description": "Uses PHP recursive iterator classes and regex iterator class to recursively search directories for .php files.",
     "license": "GPL-3.0-or-later",
     "require": {
